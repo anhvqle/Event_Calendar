@@ -20,6 +20,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
             username = response.username;
             token = response.token;
             updateCalendar();
+            $("#message").text(`Welcome back, ${username}!`);
+            $("#sign-up").hide();
+            $("#log-in").hide();
+            $(".add_event_btn").show();
+            displayEvent();
+
+            //show logout btn
+            $("#logout_div").show();
+            //show share btn
+            $("#share_div").show();
         }
         else{
             console.log("Not log in");
