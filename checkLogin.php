@@ -10,16 +10,22 @@ $json_obj = json_decode($json_str, true);
 
 $token = $json_obj['token'];
 
-if(isset($_SESSION['token']) && $token == $_SESSION['token']){
-    $success = true;
+if(isset($_SESSION['token']) && isset($_SESSION['username'])){
+    $username = $_SESSION['username'];
+    $token = $_SESSION['token'];
+    echo json_encode(array(
+        "success" => true,
+        "username" => $username,
+        "token" => $token
+    ));
 }
 else{
-    $success = false;
+    echo json_encode(array(
+        "success" => false
+    ));
 }
 
-echo json_encode(array(
-    "success" => $success
-));
+
 
 exit;
 ?>

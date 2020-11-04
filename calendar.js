@@ -11,8 +11,6 @@ let token = null;
 
 // Check if a user is still signed in after refreshing page
 document.addEventListener("DOMContentLoaded", function(event) {
-    let data = {"token" : token};
-    console.log(data);
     fetch('checkLogin.php', {
         method: "POST",
         body: JSON.stringify(data),
@@ -23,6 +21,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         if(response.success){
             //keep user log in
             console.log("User still log in");
+            username = response.username;
+            token = response.token;
             updateCalendar();
         }
         else{
