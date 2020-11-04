@@ -10,23 +10,23 @@ let currentDateToAddEvent = null;
 let token = null;
 
 // Check if a user is still signed in after refreshing page
-// document.addEventListener("DOMContentLoaded", function(event) {
-//     let data = {"token" : token};
-//     fetch('checkLogin.php', {
-//         method: "POST",
-//         body: JSON.stringify(data),
-//         headers: { 'content-type': 'application/json' }
-//     })
-//     .then(response => response.json())
-//     .then(response => {
-//         if(response.success){
-//             //keep user log in
-//             console.log("User still log in");
-//             updateCalendar();
-//         }
-//     })
-//     .catch(err => console.error(err));
-// });
+document.addEventListener("DOMContentLoaded", function(event) {
+    let data = {"token" : token};
+    fetch('checkLogin.php', {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: { 'content-type': 'application/json' }
+    })
+    .then(response => response.json())
+    .then(response => {
+        if(response.success){
+            //keep user log in
+            console.log("User still log in");
+            updateCalendar();
+        }
+    })
+    .catch(err => console.error(err));
+});
 
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
