@@ -3,7 +3,6 @@
 ini_set("session.cookie_httponly", 1);
 session_start();
 
-$username = $_SESSION['token'];
 header("Content-Type: application/json");
 
 if(isset($_SESSION['token']) && isset($_SESSION['username'])){
