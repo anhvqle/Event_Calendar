@@ -24,6 +24,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
             console.log("User still log in");
             updateCalendar();
         }
+        else{
+            console.log("Not log in");
+        }
     })
     .catch(err => console.error(err));
 });
