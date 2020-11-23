@@ -1,10 +1,21 @@
-# CSE330
-488493
-
-488494
+# Event Calendar 
+This project is part of CSE330 - Creative Programming and Rapid Prototyping
+Kien Ta - Anh Le
 
 Link to Our Calendar:
 http://ec2-13-250-43-149.ap-southeast-1.compute.amazonaws.com/~talekien1710/module5-group-module5-488493-488494/main.html
+
+# Basic functionality:
+
+A simple calendar that allows users to add and remove events dynamically. JavaScript is used for client's interaction. AJAX is used to request/save information from server. All events with associating users, dates, and time are saved in MySQL database using PHP.
+
+- A month-by-month view of the calendar.  
+- Users can register and log in to the website.  
+- Registered users can add events, and they can only see the events they added.  
+- Registered users delete their events.  
+- All data about events, users are safely stored in MySQL database.  
+- Web security added to prevent attacking, such as XSS attacks, session hijacking attacks (session cookie is HTTP-Only), CSRF attacks (token added), Injection attacks (prepared queries). Also password is salted and encrypted.
+
 
 # Creative portion:
 
