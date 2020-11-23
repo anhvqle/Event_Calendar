@@ -1,5 +1,5 @@
 # Event Calendar 
-This project is part of CSE330 - Creative Programming and Rapid Prototyping
+This project is part of CSE330 - Creative Programming and Rapid Prototyping  
 Kien Ta - Anh Le
 
 Link to Our Calendar:
